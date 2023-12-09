@@ -1,13 +1,14 @@
 const wrapper = document.querySelector(".wrapper");
 const question = document.querySelector(".question");
-const quote = document.querySelector(".quote");
+const quotes = document.querySelectorAll(".quote");
 const gif = document.querySelector(".gif");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
   question.innerHTML = "Ab 'hann' kr hi di h to baat bhi krlia kro <3";
-  quote.classList.remove("hidden");
+  // quote.classList.remove("hidden");
+  quotes.forEach((quote) => quote.classList.remove("hidden"));
   gif.src = "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
 });
 
